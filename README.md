@@ -20,22 +20,24 @@ Pipeline:
     Docker version 17.03.0-ce, build 60ccb22
     ```
 
-## Workflow
-
-Create and update the *.env* file:
+1. Create the *.env* file:
 
 ```sh
 $ cp .env.sample .env
 ```
 
-Build and tag the image:
+## Workflow
 
-```sh
-$ docker build -t sample ./src
-```
+1. Update the *src/entrypoint.sh* script along with the *.env* file
 
-Run the container:
+1. Build and tag the image:
 
-```sh
-$ docker run --env-file .env -it sample
-```
+    ```sh
+    $ docker build -t sample ./src
+    ```
+
+1. Run the container:
+
+    ```sh
+    $ docker run --env-file .env -it sample
+    ```
